@@ -11,6 +11,7 @@ class Auth:
     """ Authentication Class """
 
     def require_auth(self, path: str, excluded_paths: List[str]) -> bool:
+        """ ture or false"""
         if path is None:
             return True
         elif excluded_paths is None or not len(excluded_paths):
@@ -22,7 +23,9 @@ class Auth:
         return True
     
     def authorization_header(self, request=None) -> str:
+        """ Request Flask Object """
         return None
     
     def current_user(self, request=None) -> TypeVar('User'):
+        """ flask request object"""
         return None

@@ -13,4 +13,3 @@ class BasicAuth(Auth):
         elif 'Basic' not in authorization_header:
             return None
         return authorization_header[6:] 
-

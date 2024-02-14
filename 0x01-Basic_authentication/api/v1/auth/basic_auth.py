@@ -2,6 +2,8 @@
 """ Basic authentication Class """
 
 from api.v1.auth.auth import Auth
+import base64
+from base64 import b64decode, decode
 
 
 class BasicAuth(Auth):

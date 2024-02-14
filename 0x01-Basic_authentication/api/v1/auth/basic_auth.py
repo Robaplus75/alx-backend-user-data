@@ -4,6 +4,8 @@
 from api.v1.auth.auth import Auth
 import base64
 from base64 import b64decode, decode
+from typing import TypeVar, Tuple
+from models.user import User
 
 
 class BasicAuth(Auth):
@@ -65,4 +67,3 @@ class BasicAuth(Auth):
         user_credentials = self.user_object_from_credentials(
             user_email, user_password)
         return user_credentials
-        

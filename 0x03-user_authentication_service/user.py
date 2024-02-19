@@ -1,10 +1,10 @@
 from sqlalchemy.orm import declarative_base
 from sqlalchemy import Column, String, Integer
 
-base = declarative_base()
+Base = declarative_base()
 
 
-class User(base):
+class User(Base):
     __tablename__ = "users"
     id = Column(Integer, primary_key=True)
     email = Column(String(250), nullable=False)

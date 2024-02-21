@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """ contains User Model """
 from sqlalchemy.orm import declarative_base
 from sqlalchemy import Column, String, Integer

@@ -48,7 +48,7 @@ class Auth:
             return session_id
         except NoResultFound:
             return None
-    
+
     def valid_login(self, email: str, password: str) -> bool:
         """checks if its a valid Login"""
         try:
@@ -86,7 +86,7 @@ class Auth:
         hashed_password = _hash_password(password)
         self._db.update_user(user.id, hashed_password=hashed_password,
                              reset_token=None)
-    
+
     def get_reset_password_token(self, email: str) -> str:
         """resets password token"""
         updated_token = _generate_uuid()

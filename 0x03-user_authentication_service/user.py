@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+""" contains User Model """
 from sqlalchemy.orm import declarative_base
 from sqlalchemy import Column, String, Integer
 
@@ -5,6 +7,7 @@ Base = declarative_base()
 
 
 class User(Base):
+    """ User Model Class"""
     __tablename__ = "users"
     id = Column(Integer, primary_key=True)
     email = Column(String(250), nullable=False)
